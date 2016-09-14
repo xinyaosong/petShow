@@ -3,7 +3,7 @@ var path = require('path')
 
 module.exports = {
 	plugins: [new webpack.HotModuleReplacementPlugin()],
-    entry: './index.js',
+    entry: path.join(__dirname, 'index.js'),
     output: {
 		path: path.resolve(__dirname, './static/js'),
 		filename: 'bundle.js',
