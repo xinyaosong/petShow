@@ -1,0 +1,130 @@
+.center(@height:100%, @width: 100%){
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	max-width: @width;
+	max-height: @height;
+	overflow: hidden;
+}
+body{
+	background: url('../image/bk8.jpg');	
+}
+
+li{
+	list-style-type: none;
+}
+
+header{
+	position: fixed;
+	top: 20px;
+	left: 0px;
+}
+#rectangle{
+	position: absolute;
+	width: 300px;
+	height: 50px;
+	border-radius: 1px;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	font-size: large;
+	background-color: lightslategrey;
+}
+#triangle{
+	position: absolute;
+	left: 300px;
+	height: 0;
+	width: 0;
+	border-radius: 1px;
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	border-left: 30px solid lightslategrey;
+}
+.homeIcon{
+	position: fixed;
+	bottom: 10%;
+	right: 7%;
+	text-align: center;
+}
+#addIcon{
+	width: 40px;
+	height: 40px;
+	color: #fff;
+	border-radius: 40px;
+	cursor: pointer;
+	outline: none;
+	background-color: #999999;
+	border: 1px solid #999999;
+	&:hover{
+		border: 1px solid #ccc;
+		background-color: #ccc;
+		color: #fff;
+	}
+	&:focus{
+		outline: none;
+	}
+}
+#addIcon:hover::after{
+	content: '332'
+}
+
+#submitIcon{
+	width: 40px;
+	margin-top: 10px;
+	cursor: pointer;
+	color: yellowgreen;
+	&:hover{
+		color: #99FF33;
+	}
+}
+
+#mainContent{
+	width: 56%;
+}
+
+.imgContainer{
+	margin-bottom: 10px;
+}
+
+#uploadList{
+	margin-top: 100px;
+}
+
+.imgListWrapper{
+	position: relative;
+	margin-top: 50px;
+	height: 500px;
+	border-left: 3px solid lightsalmon;
+	margin: 50px 90px;
+	img{
+		.center(90%, 90%);
+		margin-left: 90px;
+		border: 12px solid rgba(255, 255, 255, 0.3);
+	}
+}
+
+#imgMark{
+	text-align: center;
+	color: white;
+	-webkit-padding-start: 0px;
+	li{
+		background-color: lightslategrey;
+		width: 30px;
+		margin-bottom: 5px;
+		cursor: pointer;
+		transition: padding-left .25s ease-in-out;
+		&:hover{
+			padding-left: 60px;
+			background-color: lightsalmon;
+		}
+		&.on{
+			padding-left: 60px;
+			background-color: lightsalmon;
+		}
+	}
+}
+
+
