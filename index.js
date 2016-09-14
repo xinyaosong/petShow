@@ -20,9 +20,13 @@ class HomeComponent extends React.Component{
 		})
 	}
 	handleSubmit(){
-		this.setState({
-			showImg: true,
-		});
+		const imgList = $('img');
+		if ( imgList.length <= 0 ){
+			$('.uploadError').css('opacity', 1);
+		}else{
+			$('.uploadError').hide();
+			this.setState({showImg: true,});
+		}
 	}
 	render(){
 
@@ -66,6 +70,7 @@ class HomeComponent extends React.Component{
 						</h1>
 					</div>
 				</aside>
+				<div className="uploadError"><h3>Please upload at least one picture.</h3></div>
 			</div>
 		)
 	}
