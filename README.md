@@ -17,4 +17,6 @@ First you'll need Node.js and the package manager that comes with it: npm.
   npm start
 ```
 
-Now open up [http://localhost:8080](http://localhost:8080) and upload your pictures then click the "play" button.
+Now open up [http://localhost:8080/webpack-dev-server/pet.html]
+
+and upload your pictures then click the "play" button.
