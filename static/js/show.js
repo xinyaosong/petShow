@@ -35,7 +35,7 @@ export default class ShowImgComponent extends React.Component{
 class GetImgList extends React.Component{
 	render(){
 		let imgList = [];
-		const preImgList = $('.dropify-render img');
+		const preImgList = $('.dropify-render').find('img');
 		const jq_imgList = preImgList.map((index, img)=>{
 			const src = img.src;	
 			return <li key={index}><img src={src} alt="favorite picture" /></li>
@@ -54,7 +54,7 @@ class GetImgList extends React.Component{
 class GetImgMark extends React.Component{
 	render(){
 		let list = [];
-		const preImgList = $('.dropify-render img');
+		const preImgList = $('.dropify-render').find('img');
 		const jq_list = preImgList.map((index)=>{
 			if (index ==0 ){
 				return <li key={index} className="on">{index+1}</li>

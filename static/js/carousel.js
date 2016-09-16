@@ -46,7 +46,7 @@ const carousel = function(){
 		start: function(){
 			var _this = this;
 			this.imgWrapper   = $('.imgListWrapper');
-			this.imgList      = $('.imgListWrapper img');
+			this.imgList      = $('.imgListWrapper').find('img');
 			this.index 		  = 0;
 
 			if(!this.imgList.length || this.imgList.length == 1){
